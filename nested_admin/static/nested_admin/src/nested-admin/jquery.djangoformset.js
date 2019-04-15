@@ -302,7 +302,7 @@ class DjangoFormset {
                 const compatModels = compatibleParents[ctype] || [];
                 const isPolymorphic = !!($(el).data('inlineFormset').options.childTypes);
                 if (isPolymorphic && fkModel !== ctype && compatModels.indexOf(fkModel) === -1) {
-                    el.parentNode.removeChild(el);
+                    el.empty();
                 }
             });
         }
